@@ -1,0 +1,17 @@
+
+#based on
+https://www.youtube.com/watch?v=FlSup_eelYE&list=PLgcKMlJueAM5TOhhyPpFshUd-In7YwCQW&index=9
+https://stackoverflow.com/questions/30204884/creating-a-jar-from-a-maven-project-in-intellij
+
+
+#create jar file
+mvn clean install
+
+#create image using jar file
+docker build -f Dockerfile -t docker-spring-boot .
+
+#run image
+docker run -p 8085:8085 docker-spring-boot
+
+#check url
+http://localhost:8085/
