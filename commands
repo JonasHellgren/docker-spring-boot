@@ -11,7 +11,7 @@ mvn clean install
 docker build -f Dockerfile -t docker-spring-boot .
 
 #run image
-docker run -p 8085:8085 docker-spring-boot
+docker run -d -p 8085:8085 docker-spring-boot
 
 #check url
-http://localhost:8085/
+http://localhost:8085/rest/docker/hello
